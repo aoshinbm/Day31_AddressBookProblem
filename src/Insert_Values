@@ -1,0 +1,9 @@
+mysql> insert into AddressBook
+    -> (firstname,lastname,address,city,state,phoneno,email)
+    -> values
+    -> ("Rose","Carter","2nd North Street","Pune","MAHA",987586241,"rose@mail.co"),
+    -> ("Amy","Owen","Northhill","Nagpur","MAHA",988636541,"oamy@gmail.co"),
+    -> ("Lucian","Stokes","F City","Jaipur","Rajasthan",85436541,"lstokes@gmail.com"),
+    -> ("Arjun","Reddy","Moon City","Belgaon","Karnataka",8532331,"reddys@gmail.com") ;
+Query OK, 4 rows affected (0.06 sec)
+Records: 4  Duplicates: 0  Warnings: 0
