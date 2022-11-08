@@ -1,0 +1,16 @@
+mysql> update AddressBook
+    -> set phoneno=123456789
+    -> where city="Belgaon" ;
+Query OK, 1 row affected (0.06 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+
+mysql> select * from  AddressBook;
++-----------+----------+------------------+---------+-----------+-----------+-------------------+
+| firstname | lastname | address          | city    | state     | phoneno   | email             |
++-----------+----------+------------------+---------+-----------+-----------+-------------------+
+| Rose      | Carter   | 2nd North Street | Pune    | MAHA      | 987586241 | rose@mail.co      |
+| Amy       | Owen     | Northhill        | Nagpur  | MAHA      | 988636541 | oamy@gmail.co     |
+| Lucian    | Stokes   | F City           | Jaipur  | Rajasthan |  85436541 | lstokes@gmail.com |
+| Arjun     | Reddy    | Moon City        | Belgaon | Karnataka | 123456789 | reddys@gmail.com  |
++-----------+----------+------------------+---------+-----------+-----------+-------------------+
+4 rows in set (0.00 sec)
