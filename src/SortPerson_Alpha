@@ -1,0 +1,13 @@
+mysql> select * from AddressBook
+    -> ORDER BY firstname;
++-----------+----------+---------------------+----------+-------------+-----------+-------------------+
+| firstname | lastname | address             | city     | state       | phoneno   | email             |
++-----------+----------+---------------------+----------+-------------+-----------+-------------------+
+| Alyssa    | Ride     | Charity Spring Road | Amritsar | Punjab      | 354859632 | ride@mail.co      |
+| Amy       | Owen     | Northhill           | Nagpur   | MAHA        | 988636541 | oamy@gmail.co     |
+| Ivy       | Jones    | Main Road           | Mumbai   | Maharashtra |   7894561 | jones@mail.com    |
+| Lucian    | Stokes   | F City              | Jaipur   | Rajasthan   |  85436541 | lstokes@gmail.com |
+| Rose      | Carter   | 2nd North Street    | Pune     | MAHA        | 987586241 | rose@mail.co      |
+| Rowan     | Jennings | People Charity Road | Madgaon  | Goa         |  47859632 | rowan@gmail.com   |
++-----------+----------+---------------------+----------+-------------+-----------+-------------------+
+6 rows in set (0.00 sec)
