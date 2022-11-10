@@ -1,0 +1,23 @@
+mysql> select count(relation) from AddressBook;
++-----------------+
+| count(relation) |
++-----------------+
+|               6 |
++-----------------+
+1 row in set (0.02 sec)
+
+mysql> select count(phoneno) from AddressBook;
++----------------+
+| count(phoneno) |
++----------------+
+|              6 |
++----------------+
+1 row in set (0.00 sec)
+
+mysql> select count(*) from AddressBook;
++----------+
+| count(*) |
++----------+
+|        6 |
++----------+
+1 row in set (0.00 sec)
