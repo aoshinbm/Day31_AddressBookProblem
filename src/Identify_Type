@@ -1,0 +1,66 @@
+mysql> alter table AddressBook
+    -> add relation varchar(30);
+Query OK, 0 rows affected (0.23 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+mysql> select * from AddressBook;
++-----------+----------+---------------------+----------+-------------+-----------+-------------------+----------+
+| firstname | lastname | address             | city     | state       | phoneno   | email             | relation |
++-----------+----------+---------------------+----------+-------------+-----------+-------------------+----------+
+| Rose      | Carter   | 2nd North Street    | Pune     | MAHA        | 987586241 | rose@mail.co      | NULL     |
+| Amy       | Owen     | Northhill           | Nagpur   | MAHA        | 988636541 | oamy@gmail.co     | NULL     |
+| Lucian    | Stokes   | F City              | Jaipur   | Rajasthan   |  85436541 | lstokes@gmail.com | NULL     |
+| Ivy       | Jones    | Main Road           | Mumbai   | Maharashtra |   7894561 | jones@mail.com    | NULL     |
+| Rowan     | Jennings | People Charity Road | Madgaon  | Goa         |  47859632 | rowan@gmail.com   | NULL     |
+| Alyssa    | Ride     | Charity Spring Road | Amritsar | Punjab      | 354859632 | ride@mail.co      | NULL     |
++-----------+----------+---------------------+----------+-------------+-----------+-------------------+----------+
+6 rows in set (0.00 sec)
+
+mysql> update AddressBook
+    -> set relation="Granny"
+    -> where firstname="Rose";
+Query OK, 1 row affected (0.29 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+
+mysql> update AddressBook
+    -> set relation="StepSister"
+    -> where lastname="Owen";
+Query OK, 1 row affected (0.09 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+
+mysql> update AddressBook
+    -> set relation="Husband"
+    -> where address="F city";
+Query OK, 1 row affected (0.06 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+
+mysql> update AddressBook
+    -> set relation="Friend"
+    -> where city="Mumbai";
+Query OK, 1 row affected (0.03 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+
+mysql> update AddressBook
+    -> set relation="Son"
+    -> where state="Goa";
+Query OK, 1 row affected (0.05 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+
+mysql> update AddressBook
+    -> set relation="wife"
+    -> where email="ride@mail.co";
+Query OK, 1 row affected (0.06 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+
+mysql> select * from AddressBook;
++-----------+----------+---------------------+----------+-------------+-----------+-------------------+------------+
+| firstname | lastname | address             | city     | state       | phoneno   | email             | relation   |
++-----------+----------+---------------------+----------+-------------+-----------+-------------------+------------+
+| Rose      | Carter   | 2nd North Street    | Pune     | MAHA        | 987586241 | rose@mail.co      | Granny     |
+| Amy       | Owen     | Northhill           | Nagpur   | MAHA        | 988636541 | oamy@gmail.co     | StepSister |
+| Lucian    | Stokes   | F City              | Jaipur   | Rajasthan   |  85436541 | lstokes@gmail.com | Husband    |
+| Ivy       | Jones    | Main Road           | Mumbai   | Maharashtra |   7894561 | jones@mail.com    | Friend     |
+| Rowan     | Jennings | People Charity Road | Madgaon  | Goa         |  47859632 | rowan@gmail.com   | Son        |
+| Alyssa    | Ride     | Charity Spring Road | Amritsar | Punjab      | 354859632 | ride@mail.co      | wife       |
++-----------+----------+---------------------+----------+-------------+-----------+-------------------+------------+
+6 rows in set (0.00 sec)
